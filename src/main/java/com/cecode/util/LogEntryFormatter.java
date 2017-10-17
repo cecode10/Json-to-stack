@@ -3,7 +3,11 @@ package com.cecode.util;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.StringReader;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
+import com.google.common.collect.Lists;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
@@ -12,7 +16,7 @@ import com.cecode.domain.LogEntry;
 
 public class LogEntryFormatter {
 
-    public static String[] extractStackFromJson(String json) throws IOException {
+    public static List<String> extractStackFromJson(String json) throws IOException {
 
         final BufferedReader br = new BufferedReader(new StringReader(json));
         final StringBuilder sb = new StringBuilder();
@@ -32,7 +36,8 @@ public class LogEntryFormatter {
             throw e;
         }
         final String exception = logEntry.getException();
-        return exception.split("] ");
+        final String[] result = exception.split("] ");
+        return Arrays.stream(result).collect(Collectors.toList());
     }
 }
 

@@ -3,26 +3,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="favicon.ico">
-
     <title>Json to Stacktrace</title>
     <link href="bootstrap.min.css" rel="stylesheet">
     <link href="form.css" rel="stylesheet">
 </head>
 
 <body>
-
-<div class="container">
-
-    <form class="form-signin" method="POST" action="http://localhost:8081/format/json">
-        <h2 class="form-signin-heading">Format Json Logs</h2>
-        <!--<textarea rows="6" cols="100" id="inputJson" class="form-control" placeholder="Json log entry" required autofocus></textarea>-->
-        <input name="inputJson" class="form-control" placeholder="Json log entry" required autofocus/>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Show me Stacktrace</button>
-    </form>
-
-</div>
+    <div class="container">
+        <form class="form-signin" method="POST" action="http://localhost:8081/format/json">
+            <textarea rows="6" cols="100" name="inputJson" class="form-control" placeholder="Json {} here" required
+                      autofocus></textarea>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Show me Stacktrace</button>
+        </form>
+    </div>
 </body>
 </html>
