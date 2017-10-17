@@ -1,3 +1,5 @@
+package com.cecode.domain;
+
 public class LogEntry {
 
     String level;
