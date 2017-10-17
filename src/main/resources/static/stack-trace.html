@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Bootstrap Example</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link th:href="@{../bootstrap.min.css}" href="bootstrap.min.css" rel="stylesheet"/>
+    <link th:href="@{../form.css}" href="form.css"  rel="stylesheet" />
 </head>
-<body style="padding-top: 100px; padding-bottom: 40px; background-color: rgb(238, 238, 238);">
+<body>
 
 <div class="container">
     <input class="btn btn-lg btn-primary btn-block" type="submit" value="Again" onclick="window.location='/';" />

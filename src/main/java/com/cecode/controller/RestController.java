@@ -21,10 +21,9 @@ public class RestController {
             final List<String> exceptionLines = LogEntryFormatter.extractStackFromJson(inputJson);
             model.addAttribute("exceptionLines", exceptionLines);
             return "stack-trace";
-
         } catch (Exception e) {
-            throw e;
-            //return new String[]{"Ups something went wrong!, " + e.getMessage()};
+            model.addAttribute("exceptionMessage", e.getMessage());
+            return "error";
         }
     }
 }

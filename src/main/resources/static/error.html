@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link th:href="@{../bootstrap.min.css}" href="bootstrap.min.css" rel="stylesheet"/>
+    <link th:href="@{../form.css}" href="form.css"  rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <form class="form-signin" method="POST" action="http://localhost:8081/format/json">
+            <textarea rows="6" cols="100" name="inputJson" class="form-control" contenteditable="false">Ups something went wrong! Exception Message: <span th:text="${exceptionMessage}" th:remove="tag"></span></textarea>
+            <input type="button" onclick="location.href='/';" class="btn btn-lg btn-primary btn-block" value="Again" />
+        </form>
+    </div>
+</body>
+</html>
